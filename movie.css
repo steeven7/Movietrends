@@ -1,0 +1,106 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	line-height: 1.5;
+	letter-spacing: 0.2em;
+	font-family: "Noto Sans JP", sans-serif;
+	background: #000000;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin: 0;
+}
+
+img {
+	height: 50em;
+	margin-top: 1em;
+	display: block;
+	border-radius: 5px;
+}
+
+.space-small > * + * {
+	margin-top: 1.5rem;
+}
+
+.hero {
+	padding: 5em 0;
+	text-align: center;
+	background: #000000;
+}
+
+.primary-title {
+	font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #fff;
+	text-shadow: 0 0 5px rgb(12, 132, 180), 0 0 10px rgb(12, 132, 180),
+		0 0 20px rgb(12, 132, 180), 0 0 40px rgb(0, 162, 255),
+		0 0 80px rgb(0, 162, 255), 0 0 90px rgb(0, 195, 255),
+		0 0 100px rgb(0, 153, 255), 0 0 150px rgb(0, 195, 255);
+}
+
+.secondary-title {
+	color: rgb(52, 159, 185);
+}
+
+.column {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	justify-content: center;
+	align-items: center;
+}
+
+.column {
+	flex: 1 1 25em;
+	margin-bottom: 2em;
+}
+
+.item {
+	position: relative;
+}
+.overlay {
+	position: absolute;
+	top: 1em;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 50em;
+	width: 100%;
+	text-align: center;
+	opacity: 0;
+	backdrop-filter: blur(20px);
+	background: #3e8e98;
+	border-radius: 5px;
+	transition: 0.4s ease;
+}
+
+.item:hover .overlay {
+	opacity: 0.9;
+}
+
+.filmtitle {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 1em;
+	font-size: 1.5em;
+	background: rgb(241, 124, 241);
+	text-transform: uppercase;
+}
+
+.rate {
+	background: rgb(206, 108, 206);
+	text-transform: uppercase;
+}
+
+.desc {
+	font-size: 1.25em;
+}
